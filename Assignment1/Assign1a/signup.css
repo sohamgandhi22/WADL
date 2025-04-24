@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Slab", serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 
+                0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.form-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputbox {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 20px;
+}
+
+.inputbox input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f8f9fa;
+    font-size: 16px;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #4a90e2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #357abd;
+}
+
+.register {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register p {
+    color: #666;
+}
+
+.register a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}

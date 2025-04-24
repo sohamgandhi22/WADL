@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-box" id="formContainer">
+        <div class="form-value">
+            <form id="registerForm" method="POST" onsubmit="return validateForm(event)" autocomplete="off">
+                <h2>Register</h2>
+                
+                <div class="inputbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" id="name" required>
+                    <label>Full Name</label>
+                    <span class="alert" id="nameAlert"></span>
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" id="email" required>
+                    <label>Email Address</label>
+                    <span class="alert" id="emailAlert"></span>
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <input type="tel" id="mobileno" required>
+                    <label>Mobile Number</label>
+                    <span class="alert" id="mobileAlert"></span>
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <textarea id="address" required></textarea>
+                    <label>Address</label>
+                    <span class="alert" id="addressAlert"></span>
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <select id="city" required>
+                        <option value="" disabled selected></option>
+                        <option value="pune" selected>Pune</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                    </select>
+                    <label>City</label>
+                    <span class="alert" id="cityAlert"></span>
+                </div>
+
+                <div class="inputbox">
+                    <label class="static-label">Gender</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male" required> Male</label>
+                        <label><input type="radio" name="gender" value="female" required> Female</label>
+                        <label><input type="radio" name="gender" value="other" required> Other</label>
+                    </div>
+                    <span class="alert" id="genderAlert"></span>
+                </div>
+
+                <div class="inputbox">
+                    <label class="static-label">Hobbies</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="hobbies" value="swimming"> Swimming</label>
+                        <label><input type="checkbox" name="hobbies" value="cricket"> Cricket</label>
+                        <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+                    </div>
+                    <span class="alert" id="hobbiesAlert"></span>
+                </div>
+
+                <button type="submit">Register</button>
+
+                <div class="register">
+                    <p>Already have an account?</p>
+                    <a href="login.html">Log in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="table-container" id="tableContainer" style="display: none;">
+        <h2>Registered Users</h2>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Gender</th>
+                    <th>Hobbies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User data will be appended here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
